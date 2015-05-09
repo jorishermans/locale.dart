@@ -5,10 +5,13 @@ A library that represents a locale
 ## Usage
 
 The Locale class object represents a specific geographical, political, or cultural region. 
+
 Following are the important points about Locale:
 
 An operation that requires a Locale to perform its task is called locale-sensitive and uses the Locale to form information for the user.
 Locale is a mechanism for identifying objects, not a container for the objects themselves.
+
+
 
 ### Notes to Contributors ###
 

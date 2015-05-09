@@ -17,6 +17,7 @@ main() {
     test('check locale', () {
       expect(locale.getCountry(), "");
       expect(locale.getLanguage(), "en");
+      expect(locale.toString(), "en");
     });
   });
 }
