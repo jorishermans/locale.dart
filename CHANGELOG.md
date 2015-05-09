@@ -2,7 +2,7 @@
 
 ## 0.1.1
 
-- add some more tests
+- add some more explanation in the comments
 
 ## 0.1.0
 

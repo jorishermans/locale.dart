@@ -170,17 +170,17 @@ class Locale {
     }
 
     /**
-     * Returns a <code>Locale</code> constructed from the given
-     * <code>language</code>, <code>country</code> and
-     * <code>variant</code>. If the same <code>Locale</code> instance
+     * Returns a [Locale] constructed from the given
+     * [language], [country] and
+     * [variant]. If the same [Locale] instance
      * is available in the cache, then that instance is
-     * returned. Otherwise, a new <code>Locale</code> instance is
+     * returned. Otherwise, a new [Locale] instance is
      * created and cached.
      *
      * @param language lowercase two-letter ISO-639 code.
      * @param country uppercase two-letter ISO-3166 code.
      * @param variant vendor and browser specific code. See class description.
-     * @return the <code>Locale</code> instance requested
+     * @return the [Locale] instance requested
      * @exception NullPointerException if any argument is null.
      */
     static Locale getInstance(String language, String country, String variant) {
@@ -201,33 +201,13 @@ class Locale {
     }
     
     /**
-     * Sets the default locale for this instance of the Java Virtual Machine.
-     * This does not affect the host locale.
-     * <p>
-     * If there is a security manager, its <code>checkPermission</code>
-     * method is called with a <code>PropertyPermission("user.language", "write")</code>
-     * permission before the default locale is changed.
-     * <p>
-     * The Java Virtual Machine sets the default locale during startup
-     * based on the host environment. It is used by many locale-sensitive
-     * methods if no locale is explicitly specified.
-     * <p>
-     * Since changing the default locale may affect many different areas
-     * of functionality, this method should only be used if the caller
-     * is prepared to reinitialize locale-sensitive code running
-     * within the same Java Virtual Machine.
      *
-     * @throws SecurityException
-     *        if a security manager exists and its
-     *        <code>checkPermission</code> method doesn't allow the operation.
-     * @throws NullPointerException if <code>newLocale</code> is null
+     * @throws NullPointerException if [newLocale] is null
      * @param newLocale the new default locale
-     * @see SecurityManager#checkPermission
-     * @see java.util.PropertyPermission
      */
     static void setDefault(Locale newLocale) {
         if (newLocale == null)
-            // throw new NullPointerException("Can't set default locale to NULL");
+            throw new ArgumentError("Can't set default locale to NULL");
 
             defaultLocale = newLocale;
     }
@@ -235,7 +215,7 @@ class Locale {
     /**
      * Returns the language code for this locale, which will either be the empty string
      * or a lowercase ISO 639 code.
-     * <p>NOTE:  ISO 639 is not a stable standard-- some languages' codes have changed.
+     * NOTE:  ISO 639 is not a stable standard-- some languages' codes have changed.
      * Locale's constructor recognizes both the new and the old codes for the languages
      * whose codes have changed, but this function always returns the old code.  If you
      * want to check for a specific language whose code has changed, don't do <pre>
@@ -243,7 +223,7 @@ class Locale {
      *    ...
      * </pre>Instead, do<pre>
      * if (locale.getLanguage().equals(new Locale("he", "", "").getLanguage()))
-     *    ...</pre>
+     *    ...
      * @see #getDisplayLanguage
      */
     String getLanguage() {
