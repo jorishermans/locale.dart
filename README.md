@@ -1,6 +1,6 @@
-# locale
+# locale.dart
 
-A library for Dart developers. It is awesome.
+A library that represents a locale
 
 ## Usage
 

@@ -2,7 +2,7 @@ name: locale
 description: This is a port of java.util.locale to dart
 version: 0.0.1
 author: Joris Hermans <hermansj@gmail.com>
-homepage: http://github.com/jorishermans/locale
+homepage: https://github.com/jorishermans/locale.dart
 #dependencies:
 #  lib_name: any
 dev_dependencies:
